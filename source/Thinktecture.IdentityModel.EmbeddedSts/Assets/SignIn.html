@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Thinktecture IdentityModel Embedded STS : Sign In</title>
+    <style>
+        body{
+            font-family:sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form action="{signInUrl}" method="post">
+        <fieldset>
+            <legend>Sign In As</legend>
+            <p>
+                <label for="username">Username</label>
+                <select name="username" id="username"></select>
+            </p>
+            <p><button>Sign In</button></p>
+        </fieldset>
+    </form>
+    <script>
+        var users = {userArray};
+        var select = document.getElementById("username");
+        for(var i = 0; i < users.length; i++){
+            var opt = "<option>" + users[i] + "</option>";
+            select.innerHTML += opt;
+        }
+    </script>
+</body>
+</html>
