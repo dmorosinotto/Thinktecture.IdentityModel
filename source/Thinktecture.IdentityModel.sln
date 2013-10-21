@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Swt", "Thinktecture.IdentityModel.Swt\Thinktecture.IdentityModel.Swt.csproj", "{75CC1E99-3401-4E71-855F-842C80BA3B3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Owin", "Thinktecture.IdentityModel.Owin\Thinktecture.IdentityModel.Owin.csproj", "{2AFD23F2-D3DF-4A25-A851-817E736318FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{75CC1E99-3401-4E71-855F-842C80BA3B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75CC1E99-3401-4E71-855F-842C80BA3B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75CC1E99-3401-4E71-855F-842C80BA3B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AFD23F2-D3DF-4A25-A851-817E736318FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AFD23F2-D3DF-4A25-A851-817E736318FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AFD23F2-D3DF-4A25-A851-817E736318FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AFD23F2-D3DF-4A25-A851-817E736318FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
