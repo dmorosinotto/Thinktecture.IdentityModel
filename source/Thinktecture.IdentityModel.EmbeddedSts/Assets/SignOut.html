@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Thinktecture IdentityModel Embedded STS : Sign Out</title>
+    <style>
+        body{
+            font-family:sans-serif;
+        }
+        iframe{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Out</h1>
+    <h2>You are now signed out</h2>
+    <p><a id="redirect"></a></p>
+    <iframe src="{signOutUrl}"></iframe>
+    <script>
+        var url = '{redirectUrl}';
+        if (url) {
+            var a = document.getElementById('redirect');
+            a.href = url;
+            a.innerHTML = "Click to return to application";
+        }
+    </script>
+</body>
+</html>
