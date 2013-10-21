@@ -5,8 +5,9 @@
 
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Thinktecture.IdentityModel.Client;
 
-namespace Thinktecture.IdentityModel.Client.Extensions
+namespace System.Net.Http
 {
     public static class HttpClientExtensions
     {
