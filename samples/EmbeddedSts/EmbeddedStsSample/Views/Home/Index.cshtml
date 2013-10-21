@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Embedded STS Sample</h1>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p><a href="~/Home/Logout" class="btn btn-primary btn-large">Logout</a></p>
+    }
+    else { 
+        <p><a href="~/Home/Login" class="btn btn-primary btn-large">Login</a></p>
+    }
+</div>
+
+
+@if(User.Identity.IsAuthenticated)
+{ 
+<div class="row">
+    <h1>Claims</h1>
+    @foreach(var claim in System.Security.Claims.ClaimsPrincipal.Current.Claims)
+    { 
+        <div class="col-sm-12">
+            @claim.Type, @claim.Value
+        </div>
+    }
+</div>
+}

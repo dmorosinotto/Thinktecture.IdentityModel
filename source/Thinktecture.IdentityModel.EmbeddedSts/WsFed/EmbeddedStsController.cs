@@ -79,7 +79,10 @@ namespace Thinktecture.IdentityModel.EmbeddedSts.WsFed
             var config = new EmbeddedTokenServiceConfiguration();
             var sts = config.CreateSecurityTokenService();
 
-            signInMsg.Reply = new Uri(Request.Url, Request.ApplicationPath + "/").AbsoluteUri;
+            var appPath = Request.ApplicationPath;
+            if (!appPath.EndsWith("/")) appPath += "/";
+
+            signInMsg.Reply = new Uri(Request.Url, appPath).AbsoluteUri;
             var response = FederatedPassiveSecurityTokenServiceOperations.ProcessSignInRequest(signInMsg, user, sts);
 
             var body = response.WriteFormPost();
@@ -88,7 +91,10 @@ namespace Thinktecture.IdentityModel.EmbeddedSts.WsFed
 
         private ActionResult ProcessSignOut(SignOutRequestMessage signOutMsg)
         {
-            var rpUrl = new Uri(Request.Url, Request.ApplicationPath + "/");
+            var appPath = Request.ApplicationPath;
+            if (!appPath.EndsWith("/")) appPath += "/";
+
+            var rpUrl = new Uri(Request.Url, appPath);
             var signOutCleanupMsg = new SignOutCleanupRequestMessage(rpUrl);
             var signOutUrl = signOutCleanupMsg.WriteQueryString();
 

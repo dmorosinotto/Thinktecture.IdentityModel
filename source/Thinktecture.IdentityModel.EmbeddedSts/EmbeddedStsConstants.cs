@@ -10,6 +10,7 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
 {
     public class EmbeddedStsConstants
     {
+        public const string EmbeddedStsIssuer = "http://EmbeddedSts";
         public const string TokenIssuerName = "urn:Thinktecture:EmbeddedSTS";
 
         internal const int SamlTokenLifetime = 60 * 10;
@@ -20,7 +21,6 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
         internal const string SignInFile = "SignIn.html";
         internal const string SignOutFile = "SignOut.html";
 
-        internal const string PathPrefix = "_sts";
         internal const string WsFedPath = "_sts";
 
         public static X509Certificate2 SigningCertificate

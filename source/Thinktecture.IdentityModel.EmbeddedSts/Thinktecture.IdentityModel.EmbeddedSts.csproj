@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AssetManager.cs" />
-    <Compile Include="DisableUrlAuthorizationModule.cs" />
+    <Compile Include="EmbeddedStsModule.cs" />
     <Compile Include="EmbeddedStsConfiguration.cs" />
     <Compile Include="EmbeddedStsConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,11 +54,11 @@
     <Compile Include="WsFed\EmbeddedTokenServiceConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\EmbeddedSigningCert.pfx" />
+    <EmbeddedResource Include="Assets\EmbeddedSigningCert.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\SignIn.html" />
-    <Content Include="Assets\SignOut.html" />
+    <EmbeddedResource Include="Assets\SignIn.html" />
+    <EmbeddedResource Include="Assets\SignOut.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

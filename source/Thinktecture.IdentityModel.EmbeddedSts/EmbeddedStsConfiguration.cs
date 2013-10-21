@@ -12,9 +12,11 @@ using System.Web.Routing;
 using System.Web.Mvc;
 using System.Web.Hosting;
 
+[assembly: PreApplicationStartMethod(typeof(Thinktecture.IdentityModel.EmbeddedSts.EmbeddedStsConfiguration), "Start")]
+
 namespace Thinktecture.IdentityModel.EmbeddedSts
 {
-    class EmbeddedStsConfiguration
+    public class EmbeddedStsConfiguration
     {
         public static void Start()
         {
@@ -22,23 +24,39 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
             {
                 ConfigureRoutes();
                 ConfigureWIF();
-                DisableUrlAuthorizationModule.Configure();
+                DynamicModuleUtility.RegisterModule(typeof(EmbeddedStsModule));
             }
+        }
+
+        private static string GetStsUrl()
+        {
+            var config = FederatedAuthentication.FederationConfiguration.WsFederationConfiguration;
+            var req = HttpContext.Current.Request;
+
+            var stsurl = config.RequireHttps ? "https://" : "http://";
+            stsurl += req.Url.Host;
+            if ((req.IsSecureConnection && req.Url.Port != 443) ||
+                (!req.IsSecureConnection && req.Url.Port != 80))
+            {
+                stsurl += ":" + req.Url.Port;
+            }
+            stsurl += req.ApplicationPath;
+            if (!stsurl.EndsWith("/")) stsurl += "/";
+            stsurl += EmbeddedStsConstants.WsFedPath;
+
+            return stsurl;
         }
 
         private static bool UseEmbeddedSTS()
         {
-            var appPath = HostingEnvironment.ApplicationVirtualPath;
-            if (!appPath.EndsWith("/")) appPath += "/";
-            appPath += EmbeddedStsConstants.WsFedPath;
-
             var config = FederatedAuthentication.FederationConfiguration;
-            return config.WsFederationConfiguration.Issuer.EndsWith(appPath);
+            return EmbeddedStsConstants.EmbeddedStsIssuer.Equals(config.WsFederationConfiguration.Issuer, StringComparison.OrdinalIgnoreCase);
         }
 
         private static void ConfigureWIF()
         {
             var config = FederatedAuthentication.FederationConfiguration;
+            //config.WsFederationConfiguration.Issuer = GetStsUrl();
             
             var inr = new ConfigurationBasedIssuerNameRegistry();
             inr.AddTrustedIssuer(EmbeddedStsConstants.SigningCertificate.Thumbprint,
