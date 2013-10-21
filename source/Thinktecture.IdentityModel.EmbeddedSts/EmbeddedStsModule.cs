@@ -14,31 +14,10 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
         {
             app.BeginRequest += app_BeginRequest;
         }
-
+        
         void app_BeginRequest(object sender, EventArgs e)
         {
-            var req = HttpContext.Current.Request;
-            var stsurl =  req.Url.Scheme + "://" + req.Url.Host;
-            if ((req.IsSecureConnection && req.Url.Port != 443) || 
-                (!req.IsSecureConnection && req.Url.Port != 80))
-            {
-                stsurl += ":" + req.Url.Port;
-            }
-            stsurl += req.ApplicationPath;
-            if (!stsurl.EndsWith("/")) stsurl += "/";
-            stsurl += EmbeddedStsConstants.WsFedPath;
-
-            var fam = FederatedAuthentication.WSFederationAuthenticationModule;
-            if (EmbeddedStsConstants.EmbeddedStsIssuer.Equals(fam.Issuer, StringComparison.OrdinalIgnoreCase))
-            {
-                fam.Issuer = stsurl;
-            }
-            
-            var config = FederatedAuthentication.FederationConfiguration.WsFederationConfiguration;
-            if (EmbeddedStsConstants.EmbeddedStsIssuer.Equals(config.Issuer, StringComparison.OrdinalIgnoreCase))
-            {
-                config.Issuer = stsurl;
-            }
+            ConfigureFam();
 
             var ctx = HttpContext.Current;
             var stsPath = ctx.Request.ApplicationPath;
@@ -52,6 +31,26 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
 
         public void Dispose()
         {
+        }
+
+        void ConfigureFam()
+        {
+            var fam = FederatedAuthentication.WSFederationAuthenticationModule;
+            var config = FederatedAuthentication.FederationConfiguration.WsFederationConfiguration;
+            var req = HttpContext.Current.Request;
+
+            var stsurl = config.RequireHttps ? "https://" : "http://";
+            stsurl += req.Url.Host;
+            if ((req.IsSecureConnection && req.Url.Port != 443) ||
+                (!req.IsSecureConnection && req.Url.Port != 80))
+            {
+                stsurl += ":" + req.Url.Port;
+            }
+            stsurl += req.ApplicationPath;
+            if (!stsurl.EndsWith("/")) stsurl += "/";
+            stsurl += EmbeddedStsConstants.WsFedPath;
+
+            config.Issuer = fam.Issuer = stsurl;
         }
     }
 }

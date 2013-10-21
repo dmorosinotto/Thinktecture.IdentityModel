@@ -28,39 +28,21 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
             }
         }
 
-        private static string GetStsUrl()
-        {
-            var config = FederatedAuthentication.FederationConfiguration.WsFederationConfiguration;
-            var req = HttpContext.Current.Request;
-
-            var stsurl = config.RequireHttps ? "https://" : "http://";
-            stsurl += req.Url.Host;
-            if ((req.IsSecureConnection && req.Url.Port != 443) ||
-                (!req.IsSecureConnection && req.Url.Port != 80))
-            {
-                stsurl += ":" + req.Url.Port;
-            }
-            stsurl += req.ApplicationPath;
-            if (!stsurl.EndsWith("/")) stsurl += "/";
-            stsurl += EmbeddedStsConstants.WsFedPath;
-
-            return stsurl;
-        }
-
         private static bool UseEmbeddedSTS()
         {
             var config = FederatedAuthentication.FederationConfiguration;
-            return EmbeddedStsConstants.EmbeddedStsIssuer.Equals(config.WsFederationConfiguration.Issuer, StringComparison.OrdinalIgnoreCase);
+            Uri issuer;
+            return
+                Uri.TryCreate(config.WsFederationConfiguration.Issuer, UriKind.Absolute, out issuer) &&
+                EmbeddedStsConstants.EmbeddedStsIssuerHost.Equals(issuer.Host, StringComparison.OrdinalIgnoreCase);
         }
 
         private static void ConfigureWIF()
         {
-            var config = FederatedAuthentication.FederationConfiguration;
-            //config.WsFederationConfiguration.Issuer = GetStsUrl();
-            
             var inr = new ConfigurationBasedIssuerNameRegistry();
             inr.AddTrustedIssuer(EmbeddedStsConstants.SigningCertificate.Thumbprint,
                                  EmbeddedStsConstants.TokenIssuerName);
+            var config = FederatedAuthentication.FederationConfiguration;
             config.IdentityConfiguration.IssuerNameRegistry = inr;
         }
 

@@ -10,7 +10,7 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
 {
     public class EmbeddedStsConstants
     {
-        public const string EmbeddedStsIssuer = "http://EmbeddedSts";
+        public const string EmbeddedStsIssuerHost = "EmbeddedSts";
         public const string TokenIssuerName = "urn:Thinktecture:EmbeddedSTS";
 
         internal const int SamlTokenLifetime = 60 * 10;
