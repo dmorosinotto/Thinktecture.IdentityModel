@@ -90,6 +90,7 @@ csx
 AppPackages/
 
 # Others
+App_Data
 [Bb]in
 [Oo]bj
 sql
