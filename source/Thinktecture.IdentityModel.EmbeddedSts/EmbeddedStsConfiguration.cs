@@ -11,6 +11,7 @@ using System.Web;
 using System.Web.Routing;
 using System.Web.Mvc;
 using System.Web.Hosting;
+using System.IO;
 
 [assembly: PreApplicationStartMethod(typeof(Thinktecture.IdentityModel.EmbeddedSts.EmbeddedStsConfiguration), "Start")]
 
@@ -25,6 +26,7 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
                 ConfigureRoutes();
                 ConfigureWIF();
                 DynamicModuleUtility.RegisterModule(typeof(EmbeddedStsModule));
+                UserManager.WriteClaimsFile();
             }
         }
 

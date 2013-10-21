@@ -10,8 +10,6 @@ using System.Web.Routing;
 using System.Web.Script.Serialization;
 using Thinktecture.IdentityModel.EmbeddedSts.Assets;
 
-// [{username:"alice", claims:[{type:"foo", value:"bar"}]}]
-
 namespace Thinktecture.IdentityModel.EmbeddedSts.WsFed
 {
     public class EmbeddedStsController : Controller
