@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FAD936F-3F5C-4D31-B733-0B76AE4D1034}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thinktecture.IdentityModel.Core</RootNamespace>
+    <AssemblyName>Thinktecture.IdentityModel.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthenticationInstantClaim.cs" />
+    <Compile Include="Base64Url.cs" />
+    <Compile Include="ClaimsAuthorization.cs" />
+    <Compile Include="Constants\Algorithms.cs" />
+    <Compile Include="Constants\DateTimeFormats.cs" />
+    <Compile Include="Constants\JwtConstants.cs" />
+    <Compile Include="Constants\OAuth2Constants.cs" />
+    <Compile Include="Constants\TokenTypes.cs" />
+    <Compile Include="Constants\WSSecurity10Constants.cs" />
+    <Compile Include="Constants\WSTrust13Constants.cs" />
+    <Compile Include="CryptoRandom.cs" />
+    <Compile Include="Extensions\ClaimsExtensions.cs" />
+    <Compile Include="Extensions\ConsoleExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\RSACryptoServiceProvider.cs" />
+    <Compile Include="Extensions\SecurityTokens.cs" />
+    <Compile Include="Extensions\XmlExtensions\XDocumentExtensions.cs" />
+    <Compile Include="Extensions\XmlExtensions\XElementExtensions.cs" />
+    <Compile Include="Extensions\XmlExtensions\XmlConverter.cs" />
+    <Compile Include="Extensions\XmlExtensions\XmlDocumentExtensions.cs" />
+    <Compile Include="Extensions\XmlExtensions\XmlElementExtensions.cs" />
+    <Compile Include="Extensions\XmlExtensions\XmlReaderExtensions.cs" />
+    <Compile Include="KeyGenerator.cs" />
+    <Compile Include="ObfuscatingComparer.cs" />
+    <Compile Include="Principal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tokens\ClaimMappings.cs" />
+    <Compile Include="Tokens\GenericUserNameSecurityTokenHandler.cs" />
+    <Compile Include="Tokens\HmacSigningCredentials.cs" />
+    <Compile Include="Tokens\SimpleSecurityToken.cs" />
+    <Compile Include="Tokens\SimpleSecurityTokenHandler.cs" />
+    <Compile Include="Tokens\TestIssuerNameRegistry.cs" />
+    <Compile Include="Tokens\WrappedSecurityToken.cs" />
+    <Compile Include="Tracing.cs" />
+    <Compile Include="X509Certificates\X509.cs" />
+    <Compile Include="X509Certificates\X509CertificatesFinder.cs" />
+    <Compile Include="X509Certificates\X509CertificatesLocation.cs" />
+    <Compile Include="X509Certificates\X509CertificatesName.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
