@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Wcf", "Thinktecture.IdentityModel.Wcf\Thinktecture.IdentityModel.Wcf.csproj", "{C08466EF-94CE-4FEB-AEE3-330DC51B11EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Swt", "Thinktecture.IdentityModel.Swt\Thinktecture.IdentityModel.Swt.csproj", "{75CC1E99-3401-4E71-855F-842C80BA3B3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{C08466EF-94CE-4FEB-AEE3-330DC51B11EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C08466EF-94CE-4FEB-AEE3-330DC51B11EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C08466EF-94CE-4FEB-AEE3-330DC51B11EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75CC1E99-3401-4E71-855F-842C80BA3B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75CC1E99-3401-4E71-855F-842C80BA3B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75CC1E99-3401-4E71-855F-842C80BA3B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75CC1E99-3401-4E71-855F-842C80BA3B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
