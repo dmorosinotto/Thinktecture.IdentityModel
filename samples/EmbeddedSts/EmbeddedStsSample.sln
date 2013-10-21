@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{53DEE9
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.EmbeddedSts", "..\..\source\Thinktecture.IdentityModel.EmbeddedSts\Thinktecture.IdentityModel.EmbeddedSts.csproj", "{408440E6-E84F-4ECD-AEBA-F3D963EAC166}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,10 +22,6 @@ Global
 		{6CB43772-C1BF-4215-B3F6-CE77B717360F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CB43772-C1BF-4215-B3F6-CE77B717360F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CB43772-C1BF-4215-B3F6-CE77B717360F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{408440E6-E84F-4ECD-AEBA-F3D963EAC166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{408440E6-E84F-4ECD-AEBA-F3D963EAC166}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{408440E6-E84F-4ECD-AEBA-F3D963EAC166}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{408440E6-E84F-4ECD-AEBA-F3D963EAC166}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
