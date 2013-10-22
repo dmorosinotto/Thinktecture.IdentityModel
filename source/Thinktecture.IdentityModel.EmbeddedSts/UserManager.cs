@@ -36,7 +36,6 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
             var users = GetAllUsers();
             var user = users.FirstOrDefault(x => x.Name == name);
             var claims = user.Claims.Select(x => new Claim(x.Type, x.Value)).ToList();
-            claims.Insert(0, new Claim(ClaimTypes.Name, name));
             return claims;
         }
 
@@ -94,6 +93,16 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
                     {
                         new UserClaim
                         {
+                            Type = ClaimTypes.NameIdentifier,
+                            Value = "alice"
+                        },
+                        new UserClaim
+                        {
+                            Type = ClaimTypes.Name,
+                            Value = "Alice"
+                        },
+                        new UserClaim
+                        {
                             Type = ClaimTypes.Email,
                             Value = "alice@alice.com"
                         }
@@ -104,6 +113,16 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
                     Name = "Bob", 
                     Claims = new UserClaim[]
                     {
+                        new UserClaim
+                        {
+                            Type = ClaimTypes.NameIdentifier,
+                            Value = "bob"
+                        },
+                        new UserClaim
+                        {
+                            Type = ClaimTypes.Name,
+                            Value = "Bob"
+                        },
                         new UserClaim
                         {
                             Type = ClaimTypes.Email,
