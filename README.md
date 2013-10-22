@@ -25,7 +25,11 @@ The new IdentityModel consists of the following parts:
 ### HTTP Security / OAuth2 Client Library
 - Portable library (.NET 4.5, Windows 8, Windows Phone 8)
 - OAuth2 client library
-- Helpers for HttpClient for dealing with Basic Authentication and token headers
+ - URL generation for code and implicit flow
+ - Token requests for authorization codes, resource owner credentials, refresh tokens, assertions
+ - Parsing of authorize and token responses
+ - Extensible
+- HttpClient helpers for dealing with Basic Authentication and token headers
 
 ### Embedded STS ###
 - Easy to use embeddable, zero-config STS for ASP.NET
