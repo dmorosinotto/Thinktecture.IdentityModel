@@ -105,7 +105,12 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
                         {
                             Type = ClaimTypes.Email,
                             Value = "alice@alice.com"
-                        }
+                        },
+                        new UserClaim
+                        {
+                            Type = "http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", 
+                            Value = "EmbeddedSts"
+                        },
                     }
                 },
                 new User
@@ -127,7 +132,12 @@ namespace Thinktecture.IdentityModel.EmbeddedSts
                         {
                             Type = ClaimTypes.Email,
                             Value = "bob@bob.com"
-                        }
+                        },
+                        new UserClaim
+                        {
+                            Type = "http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", 
+                            Value = "EmbeddedSts"
+                        },
                     }
                 }
             };

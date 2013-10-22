@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>1.0.0-beta3</version>
+    <authors>Dominick Baier, Brock Allen</authors>
+    <owners>Dominick Baier, Brock Allen</owners>
+    <copyright>Dominick Baier, Brock Allen 2013</copyright>
+
+    <projectUrl>https://github.com/thinktecture/Thinktecture.IdentityModel/wiki/EmbeddedSts</projectUrl>
+    <iconUrl>http://1.gravatar.com/blavatar/3b437c799e12e32beb1d8cfda1199ab3?s=32</iconUrl>
+
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.IdentityModel" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.IdentityModel.Services" targetFramework="net45" />
+    </frameworkAssemblies>
+    
+    <id>Thinktecture.IdentityModel.EmbeddedSts</id>
+    <title>Thinktecture.IdentityModel.EmbeddedSts</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    
+    <description>Embedded and easy to use WS-Federation STS for ASP.NET with minimal configuration. Can be used as a replacement for the deprecated "Identity and Access Control" Visual Studio extension.</description>
+    <summary>Embedded and easy to use WS-Federation STS for ASP.NET with minimal configuration. Can be used as a replacement for the deprecated "Identity and Access Control" Visual Studio extension.</summary>
+    
+    <language>en-US</language>
+    <tags>STS WS-Federation WIF Security Federation Identity Claims Authentication Authorization Access Control</tags>
+  </metadata>
+</package>

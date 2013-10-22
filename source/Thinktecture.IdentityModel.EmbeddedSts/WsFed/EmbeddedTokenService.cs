@@ -30,7 +30,8 @@ namespace Thinktecture.IdentityModel.EmbeddedSts.WsFed
         
         protected override ClaimsIdentity GetOutputClaimsIdentity(ClaimsPrincipal principal, RequestSecurityToken request, Scope scope)
         {
-            return new ClaimsIdentity(principal.Claims, "EmbeddedSTS");
+            var id = new ClaimsIdentity(principal.Claims, "EmbeddedSTS");
+            return id;
         }
     }
 }
