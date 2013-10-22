@@ -1,0 +1,2 @@
+cd Core
+nugetPack.cmd
