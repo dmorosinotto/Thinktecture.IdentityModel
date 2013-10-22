@@ -24,6 +24,7 @@ x64/
 *.meta
 *.obj
 *.dll
+*.dll.config
 *.pch
 *.pdb
 *.pgc
