@@ -7,13 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Client", "Thinktecture.IdentityModel.Client\Thinktecture.IdentityModel.Client.csproj", "{A9CC834E-BB74-4BBA-BA8F-3297011BAA0F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4DEE8EDB-CBEA-4BB1-B673-DBFFBB30808F}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.EmbeddedSts", "Thinktecture.IdentityModel.EmbeddedSts\Thinktecture.IdentityModel.EmbeddedSts.csproj", "{408440E6-E84F-4ECD-AEBA-F3D963EAC166}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Wcf", "Thinktecture.IdentityModel.Wcf\Thinktecture.IdentityModel.Wcf.csproj", "{C08466EF-94CE-4FEB-AEE3-330DC51B11EA}"
