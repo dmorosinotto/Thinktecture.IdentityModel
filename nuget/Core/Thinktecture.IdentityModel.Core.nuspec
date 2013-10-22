@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>1.0.0-alpha4</version>
+    <authors>Dominick Baier, Brock Allen</authors>
+    <owners>Dominick Baier, Brock Allen</owners>
+    <copyright>Dominick Baier, Brock Allen 2013</copyright>
+
+    <projectUrl>https://github.com/thinktecture</projectUrl>
+    <iconUrl>http://1.gravatar.com/blavatar/3b437c799e12e32beb1d8cfda1199ab3?s=32</iconUrl>
+
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.IdentityModel" targetFramework="net45" />
+    </frameworkAssemblies>
+    
+    <id>Thinktecture.IdentityModel.Core</id>
+    <title>Thinktecture.IdentityModel.Core</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    
+    <description>Helper library for claims based identity &amp; access control in .NET.</description>
+    <summary>Helper library for claims based identity &amp; access control in .NET.</summary>
+    
+    <language>en-US</language>
+    <tags>WIF Security Federation Identity Claims Authentication Authorization Access Control</tags>
+  </metadata>
+</package>
