@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>1.0.0-alpha2</version>
+    <authors>Dominick Baier, Brock Allen</authors>
+    <owners>Dominick Baier, Brock Allen</owners>
+    <copyright>Dominick Baier, Brock Allen 2013</copyright>
+
+    <projectUrl>http://thinktecture.github.io/</projectUrl>
+    <iconUrl>http://1.gravatar.com/blavatar/3b437c799e12e32beb1d8cfda1199ab3?s=32</iconUrl>
+
+    <id>Thinktecture.IdentityModel.Client</id>
+    <title>Thinktecture.IdentityModel.Client</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    
+    <description>Client library of Thinktecture.IdentityModel. Includes OAuth2Client and helpers for parsing token and authorize responses, Epoch Time helpers, extensions methods for HttpClient.</description>
+    <summary>Client library of Thinktecture.IdentityModel. Includes OAuth2Client and helpers for parsing token and authorize responses, Epoch Time helpers, extensions methods for HttpClient.</summary>
+    
+    <language>en-US</language>
+    <tags>OAuth2 JWT Tokens Federation API Authorization</tags>
+
+    <dependencies>
+      <dependency id="Microsoft.Net.Http" version="2.2.15" />
+      <dependency id="Newtonsoft.Json" version="5.0.6" />
+    </dependencies>
+  </metadata>
+</package>
