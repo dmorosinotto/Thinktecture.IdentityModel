@@ -1,6 +1,8 @@
 cd Core
-nugetPack.cmd
+call nugetPack.cmd
 cd ..
 cd Client
-nugetPack.cmd
+call nugetPack.cmd
 cd ..
+cd EmbeddedSts
+call NugetPack.cmd
