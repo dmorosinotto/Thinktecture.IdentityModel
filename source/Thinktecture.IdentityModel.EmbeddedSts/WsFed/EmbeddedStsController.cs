@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ * Copyright (c) Dominick Baier, Brock Allen.  All rights reserved.
+ * see LICENSE
+ */
+
+using System;
 using System.IdentityModel.Services;
 using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
-using System.Web.Routing;
 using System.Web.Script.Serialization;
 using Thinktecture.IdentityModel.EmbeddedSts.Assets;
 

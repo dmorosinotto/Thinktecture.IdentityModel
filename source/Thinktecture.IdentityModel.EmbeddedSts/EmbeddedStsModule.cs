@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ * Copyright (c) Dominick Baier, Brock Allen.  All rights reserved.
+ * see LICENSE
+ */
+
+using System;
 using System.IdentityModel.Services;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace Thinktecture.IdentityModel.EmbeddedSts

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel;
+﻿/*
+ * Copyright (c) Dominick Baier, Brock Allen.  All rights reserved.
+ * see LICENSE
+ */
+
+using System;
 using System.IdentityModel.Configuration;
 using System.IdentityModel.Tokens;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using Thinktecture.IdentityModel;
 
 namespace Thinktecture.IdentityModel.EmbeddedSts.WsFed
 {

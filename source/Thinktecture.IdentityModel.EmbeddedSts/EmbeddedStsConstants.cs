@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿/*
+ * Copyright (c) Dominick Baier, Brock Allen.  All rights reserved.
+ * see LICENSE
+ */
+
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using Thinktecture.IdentityModel.EmbeddedSts.Assets;
 
 namespace Thinktecture.IdentityModel.EmbeddedSts

@@ -1,17 +1,16 @@
-﻿using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+﻿/*
+ * Copyright (c) Dominick Baier, Brock Allen.  All rights reserved.
+ * see LICENSE
+ */
+
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Services;
 using System.IdentityModel.Services.Configuration;
 using System.IdentityModel.Tokens;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
-using System.Web.Routing;
 using System.Web.Mvc;
-using System.Web.Hosting;
-using System.IO;
+using System.Web.Routing;
 
 [assembly: PreApplicationStartMethod(typeof(Thinktecture.IdentityModel.EmbeddedSts.EmbeddedStsConfiguration), "Start")]
 
