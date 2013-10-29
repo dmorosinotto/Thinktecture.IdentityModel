@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 
 namespace Thinktecture.IdentityModel
 {
-    public static class Tracing
+    internal static class Tracing
     {
         private static TraceSource _ts = new TraceSource("Thinktecture.IdentityModel");
 
