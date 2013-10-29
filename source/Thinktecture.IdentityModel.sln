@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Owin", "Thinktecture.IdentityModel.Owin\Thinktecture.IdentityModel.Owin.csproj", "{2AFD23F2-D3DF-4A25-A851-817E736318FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.IdentityModel.Hawk", "Thinktecture.IdentityModel.Hawk\Thinktecture.IdentityModel.Hawk.csproj", "{98905541-49D5-44E1-BA0A-6AE9AE0CCB66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{2AFD23F2-D3DF-4A25-A851-817E736318FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AFD23F2-D3DF-4A25-A851-817E736318FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AFD23F2-D3DF-4A25-A851-817E736318FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98905541-49D5-44E1-BA0A-6AE9AE0CCB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98905541-49D5-44E1-BA0A-6AE9AE0CCB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98905541-49D5-44E1-BA0A-6AE9AE0CCB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98905541-49D5-44E1-BA0A-6AE9AE0CCB66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
