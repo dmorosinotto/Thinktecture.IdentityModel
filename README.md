@@ -34,7 +34,9 @@ The new IdentityModel consists of the following parts:
 ### Embedded STS ###
 - Easy to use embeddable, zero-config STS for ASP.NET
 
-
+### Hawk ###
+- Implementation of Hawk authentication mechanism for Web API and OWIN
+ 
 ### WCF ###
 - WS-Trust bindings for UserName, Windows, Issued Tokens and X.509 certificates
 - Helpers for dealing with RSTRs and entropy
